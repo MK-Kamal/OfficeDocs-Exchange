@@ -179,7 +179,8 @@ There are three basic methods you can use to assign authentication policies to u
     Set-User -Identity laura@contoso.com -AuthenticationPolicy "Block Basic Auth"
     ```
 
-- **Filter user accounts by attributes**: This method requires that the user accounts all share a unique filterable attribute (for example, Title or Department) that you can use to identify the users. The syntax uses the following commands (two to identify the user accounts, and the other to apply the policy to those users):
+- **Filter user accounts by attributes**: 
+if all users are in Cloud "No Hybrid between On-promsie-AD and O365"  This method requires that the user accounts are in Cloud and all share a unique filterable attribute (for example, Title or Department) that you can use to identify the users. The syntax uses the following commands (two to identify the user accounts, and the other to apply the policy to those users):
 
     ```
     $<VariableName1> = Get-User -ResultSize unlimited -Filter <Filter>
@@ -206,6 +207,16 @@ There are three basic methods you can use to assign authentication policies to u
     ```
     $Sales | foreach {Set-User -Identity $_ -AuthenticationPolicy "Block Basic Auth"}
     ```
+
+
+in Hyrbid Scenario  where users are Syncing from on-Promise AD to O365
+we will need to update On-promise users with specific attribute that will be synced with Exchange Online to filter users based on this attribute
+
+
+
+
+
+
 
 - **Use a list of specific user accounts**: This method requires a text file to identify the user accounts. Values that don't contain spaces (for example, the Office 365 work or school account) work best. The text file must contain one user account on each line like this:
 
