@@ -123,7 +123,7 @@ For email clients and apps that don't support modern authentication, you need to
 |IMAP clients|• IMAP4 <br/>• Authenticated SMTP|
 
 > [!NOTE]
-> IBlocking Basic authentication will block app passwords in Exchange Online. For more information about app passwords, see [Create an app password for Office 365](https://support.office.com/article/3e7c860f-bda4-4441-a618-b53953ee1183.aspx).
+> Blocking Basic authentication will block app passwords in Exchange Online. For more information about app passwords, see [Create an app password for Office 365](https://support.office.com/article/3e7c860f-bda4-4441-a618-b53953ee1183.aspx).
 
 ### What do you need to know before you begin?
 
